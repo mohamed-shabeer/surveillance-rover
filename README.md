@@ -1,36 +1,42 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2868
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+# Surveillance Rover (Tracked Recon Platform)
 
-\f0\fs24 \cf0 # Surveillance Rover (4WD Autonomous Recon Platform)\
-\
-## Overview\
-Custom-built 4WD surveillance rover designed for navigating confined or hazardous environments. Includes wireless control, obstacle detection, camera actuation, and telemetry logging.\
-\
-## Features\
-- 4WD tank drive\
-- nRF24L01 wireless control\
-- Ultrasonic obstacle detection\
-- Camera pan/tilt (servo)\
-- IR night vision\
-- Battery monitoring with safety cutoff\
-- Telemetry via RF\
-- SD card logging\
-\
-## System Architecture\
-![Rover](assets/rover_render.png)\
-\
-## Hardware\
-- Arduino Mega 2560\
-- nRF24L01\
-- L298N motor drivers\
-- HC-SR04 sensors\
-- Servo motors\
-- LiPo battery\
-- SD module\
-\
-## Firmware\
-Located in: firmware folder}
+## Overview
+This is a custom-built tracked surveillance rover designed to navigate tight or hazardous environments where it’s not safe (or practical) to send a person.
+
+Instead of wheels, it uses dual caterpillar tracks for better stability and traction, especially in uneven terrain or confined spaces.
+
+The focus of this project was building something reliable in real-world conditions—handling signal loss, obstacles, and battery safety while staying easy to control remotely.
+
+---
+
+## What it can do
+- Drive using dual caterpillar tracks (better grip and stability than wheels)
+- Controlled wirelessly using nRF24L01 (long-range communication)
+- Detect obstacles in real-time with ultrasonic sensors
+- Pan/tilt camera system for better visibility while moving
+- IR lighting for low-light / night operation
+- Monitor battery voltage and prevent unsafe discharge
+- Send telemetry back to the controller
+- Log data to an SD card for post-run analysis
+
+---
+
+## System Architecture
+![Architecture](docs/rover_advanced_diagram.png)
+
+---
+
+## Hardware Used
+- Arduino Mega 2560
+- nRF24L01 (PA + LNA module for extended range)
+- L298N motor drivers (dual)
+- HC-SR04 ultrasonic sensors
+- Servo motors (camera pan/tilt)
+- 5200mAh LiPo battery
+- SD card module
+- Dual caterpillar track chassis
+
+---
+
+## Firmware
+Main control logic lives here:
