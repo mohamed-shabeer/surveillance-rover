@@ -1,5 +1,8 @@
 # Surveillance Rover (Tracked Recon Platform)
 
+## Demo / Preview
+![Rover](assets/rover_render.png)
+
 ## Overview
 This is a custom-built tracked surveillance rover designed to navigate tight or hazardous environments where it’s not safe (or practical) to send a person.
 
